@@ -92,3 +92,7 @@ How it works
 -------------
 Basically, a log message produced by a hangfire job is captured by NLog `NLog.HangfireJobLogsTarget`. Thanks to `${hangfire-decorator}` and `PerformContextAccessor` log messages are sent to Hangfire storage.
 Finally, log messages are shown on the detail page thanks to a simple `JobDetailsRenderer`.
+
+See sample project:
+
+https://github.com/meriturva/Hangfire.Dashboard.JobLogs/tree/main/Sample
