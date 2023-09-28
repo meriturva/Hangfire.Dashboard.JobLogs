@@ -22,7 +22,7 @@ PM> Install-Package Bonura.Hangfire.Dashboard.JobLogs
 Configuration
 -------------
 NLog configuration with `HangfireJobLogs` target and layout with `${hangfire-decorator}` (mandatory).
-```
+```json
 "NLog": {
   "extensions": [
     {
@@ -50,7 +50,7 @@ NLog configuration with `HangfireJobLogs` target and layout with `${hangfire-dec
 ```
 
 Services configuration:
-```
+```csharp
 // Add hangfire context services
 builder.Services.AddHangfirePerformContextAccessor();
 
@@ -70,7 +70,7 @@ builder.Services.AddHangfireServer();
 ```
 
 Job using `ILogger` (Microsoft.Extensions.Logging):
-```
+```csharp
 public class SimpleJob
 {
     private ILogger<SimpleJob> _logger;
