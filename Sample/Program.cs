@@ -1,5 +1,5 @@
 using Hangfire;
-using Hangfire.JobLogs;
+using Hangfire.Dashboard.JobLogs;
 using Hangfire.PerformContextAccessor;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
