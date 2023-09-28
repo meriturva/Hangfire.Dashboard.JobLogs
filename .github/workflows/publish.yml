@@ -19,11 +19,11 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: publish on version change
-      uses: brandedoutcast/publish-nuget@v2
+    - name: Pack
+      run: dotnet pack --output ./artifacts --include-symbols -p:SymbolPackageFormat=snupkg
+    - name: Publish packages
+      run: dotnet nuget push ./artifacts/**.nupkg --source nuget.org --api-key ${{secrets.NUGET_API_KEY}}
+    - uses: actions/upload-artifact@v3.1.1
       with:
-        # Filepath of the project to be packaged, relative to root of repository
-        PROJECT_FILE_PATH: NLog.HangfireLayouts/NLog.HangfireLayouts.csproj
-        
-        # API key to authenticate with NuGet server
-        NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
+        name: artifacts
+        path: ./artifacts
