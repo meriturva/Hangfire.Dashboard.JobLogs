@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <DebugType>portable</DebugType>
-    <AssemblyVersion>1.2.0.0</AssemblyVersion>
-    <Version>1.2.0</Version>
-    <PackageId>Bonura.Hangfire.JobLogs</PackageId>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <Version>1.3.0</Version>
+    <PackageId>Bonura.Hangfire.Dashboard.JobLogs</PackageId>
     <Authors>Diego Bonura</Authors>
     <Description>Show job logs on Hangfire Dashboard</Description>
     <RepositoryType>git</RepositoryType>

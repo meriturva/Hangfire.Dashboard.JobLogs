@@ -13,7 +13,7 @@ namespace Hangfire.JobLogs
         /// Configures Hangfire to use JobLogs.
         /// </summary>
         /// <param name="configuration">Global configuration</param>
-        public static IGlobalConfiguration UseJobLogs(this IGlobalConfiguration configuration)
+        public static IGlobalConfiguration UseDashboardJobLogs(this IGlobalConfiguration configuration)
         {
             configuration.UseJobDetailsRenderer(100, dto =>
             {
