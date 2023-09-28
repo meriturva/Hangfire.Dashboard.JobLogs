@@ -61,8 +61,8 @@ builder.Services.AddHangfire((serviceProvider, config) =>
     config.UsePerformContextAccessorFilter(serviceProvider);
     // Add a storage
     config.UseInMemoryStorage();
-    // Add jobLogs
-    config.UseJobLogs();
+    // Add dashboard jobLogs
+    config.UseDashboardJobLogs();
 });
 
 // Add the processing server as IHostedService
