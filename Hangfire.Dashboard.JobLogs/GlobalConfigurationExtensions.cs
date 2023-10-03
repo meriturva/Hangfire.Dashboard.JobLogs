@@ -18,7 +18,7 @@ namespace Hangfire.Dashboard.JobLogs
                 var jobStorageConnection = JobStorage.Current.GetConnection();
                 var logsMessages = jobStorageConnection.GetAllEntriesFromHash($"joblogs-jobId:{dto.JobId}");
 
-                var logString = string.Join("<br>", logsMessages.OrderBy(kvp => kvp.Value).Select(kvp => kvp.Value));
+                var logString = string.Join("<br>", logsMessages.Select(kvp => kvp.Value));
 
                 return new NonEscapedString($"<h3>Log messages</h3>" +
                     $"<div class=\"state-card \"><div class=\"state-card-body\">{logString}</div></div>" +
