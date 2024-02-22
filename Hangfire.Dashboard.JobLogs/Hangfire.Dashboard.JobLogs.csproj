@@ -9,8 +9,7 @@
     <Authors>Diego Bonura</Authors>
     <Description>Show job logs on Hangfire Dashboard</Description>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/meriturva/Hangfire.Dashboard.JobLogs</RepositoryUrl>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/meriturva/Hangfire.Dashboard.JobLogs</RepositoryUrl>    
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <IsPackable>true</IsPackable>
