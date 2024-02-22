@@ -16,9 +16,14 @@ namespace Hangfire.Dashboard.JobLogs
             configuration.UseJobDetailsRenderer(100, dto =>
             {
                 var jobStorageConnection = JobStorage.Current.GetConnection();
+
+                var logString = "No logs found";
                 var logsMessages = jobStorageConnection.GetAllEntriesFromHash($"joblogs-jobId:{dto.JobId}");
 
-                var logString = string.Join("<br>", logsMessages.Select(kvp => kvp.Value));
+                if (logsMessages != null)
+                {
+                    logString = string.Join("<br>", logsMessages.Select(kvp => kvp.Value));
+                }
 
                 return new NonEscapedString($"<h3>Log messages</h3>" +
                     $"<div class=\"state-card \"><div class=\"state-card-body\">{logString}</div></div>" +
